@@ -119,3 +119,12 @@ override.tf.json
 terraform.rc
 tfplan
 *.tfplan
+
+# Devenv
+.devenv
+.direnv
+devenv.lock
+devenv.nix
+devenv.yaml
+.devenv.flake.nix
+.envrc

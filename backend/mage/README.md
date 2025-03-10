@@ -45,7 +45,7 @@ From `wetlands_load_wfs.py`:
 def load_data(**kwargs):
     config = kwargs.get('config', {})
     batch_size = int(config.get('batch_size', 50000))
-    
+
     # Early format standardization
     params = {
         'SRSNAME': 'EPSG:4326',
@@ -66,7 +66,7 @@ def process_batch(data, *args, **kwargs):
     # Memory-efficient processing
     batch_index = data.get('batch_index', 0)
     start_index = batch_index * batch_size
-    
+
     print(f"\n🔄 Processing batch {batch_index+1} of {metadata['num_batches']}")
 ```
 
@@ -210,4 +210,4 @@ Key testing patterns:
 3. **Storage**:
    - Local vs. Cloud storage requires different handling
    - Lazy import of cloud dependencies
-   - Environment-aware configuration 
+   - Environment-aware configuration

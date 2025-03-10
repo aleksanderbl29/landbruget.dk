@@ -1,59 +1,48 @@
-# Agricultural Data Frontend
+# Evidence Template Project
 
-Interactive map visualization of Danish agricultural and environmental data.
+## Using Codespaces
 
-## Features
-- Interactive map showing:
-  - Agricultural fields
-  - Wetland areas
-- Real-time data updates
-- Layer controls
-- Data filtering
+If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your project in your browser - you should get a popup prompting you to open in browser.
 
-## Tech Stack
-- React 18
-- MapLibre GL JS
-- TypeScript
-- Tailwind CSS
+Or you can use the following commands to get started:
 
-## Development Setup
+```bash
+npm install
+npm run sources
+npm run dev -- --host 0.0.0.0
+```
 
-### Requirements
-- Node.js 16+
-- npm or yarn
+See [the CLI docs](https://docs.evidence.dev/cli/) for more command information.
 
-### Installation Steps
-1. Install dependencies: `npm install`
-2. Start development server: `npm start`
-3. Visit http://localhost:3000
+**Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
 
-## Project Structure
+## Get Started from VS Code
 
-src/
-├── components/ # React components
-│ ├── Map/ # Map-related components
-│ └── UI/ # UI components
-├── api/ # Backend API client
-├── hooks/ # Custom React hooks
-└── types/ # TypeScript 
+The easiest way to get started is using the [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Evidence.evidence-vscode):
 
 
-## API Integration
 
-Example of fetching data:
-typescript
-import { fetchSources, fetchSourceData } from '../api/sources';
-// List available sources
-const sources = await fetchSources();
-// Fetch specific source data
-const data = await fetchSourceData('agricultural_fields');
+1. Install the extension from the VS Code Marketplace
+2. Open the Command Palette (Ctrl/Cmd + Shift + P) and enter `Evidence: New Evidence Project`
+3. Click `Start Evidence` in the bottom status bar
 
-## Adding New Features
-1. Create component in appropriate directory
-2. Add API integration if needed
-3. Update map layers if required
-4. Add to main App.tsx
+## Get Started using the CLI
 
-## Environment Variables
-Required in `.env`:
-- REACT_APP_API_URL: Backend API URL
+```bash
+npx degit evidence-dev/template my-project
+cd my-project
+npm install
+npm run sources
+npm run dev
+```
+
+Check out the docs for [alternative install methods](https://docs.evidence.dev/getting-started/install-evidence) including Docker, Github Codespaces, and alongside dbt.
+
+
+
+## Learning More
+
+- [Docs](https://docs.evidence.dev/)
+- [Github](https://github.com/evidence-dev/evidence)
+- [Slack Community](https://slack.evidence.dev/)
+- [Evidence Home Page](https://www.evidence.dev)
